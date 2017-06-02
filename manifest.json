@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "LoL Stream Browser",
+  "version": "1.3.0.17",
+  "manifest_version": 2,
+  "description": "Browse and watch League of Legends livestreams. Mark streams as favorites and receive alerts when they're live.",
+  "icons": {
+    "16": "games/lol/image/icon_16.png",
+    "19": "games/lol/image/icon_19.png",
+    "32": "games/lol/image/icon_32.png",
+    "48": "games/lol/image/icon_48.png",
+    "64": "games/lol/image/icon_64.png",
+    "96": "games/lol/image/icon_96.png",
+    "128": "games/lol/image/icon_128.png"
+  },
+  "browser_action": {
+    "default_icon": "games/lol/image/icon_19.png",
+	"default_title": "LoL Stream Browser",
+	"default_popup": "html/streams_popup.html"
+  },
+  "background": {
+    "scripts": [
+    "js/jquery-2.0.3.min.js",
+    "js/utility.js",
+    "js/analytics.js",
+    "js/host_chrome.js",
+    "js/storage.js",
+    "js/settings.js",
+    "js/favorites.js",
+    "js/stream_base.js",
+    "js/game_base.js",
+    "js/service_twitch_auth.js",
+    "js/service_base.js",
+    "js/service_twitch.js",
+    "js/service_azubu.js",
+    "js/service_hitbox.js",
+    "js/service_youtube.js",
+    "games/lol/game_lol.js",
+    "js/streambg.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "notifications",
+    "storage",
+    "identity",
+    "https://api.twitch.tv/",
+    "https://api.azubu.tv/",
+    "https://api.hitbox.tv/",
+    "http://www.livestreambrowser.com/\""
+  ],
+  "web_accessible_resources": [
+    "../games/lol/image/icon_48.png"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

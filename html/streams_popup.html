@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+/*
+ * Live Stream Browser is Copyright (C) 2011-2016 Kyle Schouviller <Kyle0654@hotmail.com>
+ * 
+ * You are hereby granted a licence to use the software as-is, and view the source code for educational purposes.
+ * You may not create derivative versions of the software without written permission of the author.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link type="text/css" rel="Stylesheet" href="../style/streambrowser.css" />
+    <link id="theme" type="text/css" rel="Stylesheet" class="theme" href="../games/lol/lol.css" />
+    <script type="text/javascript" language="javascript" src="../js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/analytics.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/table_ui.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/search_ui.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/settings_ui.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/streamfg.js"></script>
+</head>
+<body class="popup">
+    <div id="mainpanel">
+        <div id="headbar">
+            <button id="showsettings" class="settings" title="Settings"></button>
+            <button id="showsearch" class="search" title="Search"></button>
+        </div>
+        <div id="streamscontainer">
+            <progress></progress>
+        </div>
+	    <div id="settingspanel" style="display:none;">
+		    <button id="hidesettings" class="settings settingsbright" title="Settings"></button>
+            <div id="settingsSection">
+            </div>
+            <div id="about">
+                <h1>test</h1>
+                <span>Author: Kyle Schouviller</span><br />
+                <span id="versioninfo">Version: x.x.x</span>
+            </div>
+	    </div>
+        <div id="searchpanel" style="display:none;">
+		    <button id="hidesearch" class="search searchbright" title="Search"></button>
+            <input type="search" id="searchinput" />
+            <div id="searchresults">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

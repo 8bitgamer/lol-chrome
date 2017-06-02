@@ -1,0 +1,91 @@
+﻿/*
+ * Live Stream Browser is Copyright (C) 2011-2016 Kyle Schouviller <Kyle0654@hotmail.com>
+ * 
+ * You are hereby granted a licence to use the software as-is, and view the source code for educational purposes.
+ * You may not create derivative versions of the software without written permission of the author.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+/* body style */
+body {
+  background-image: url("image/lolbg.png");
+  border-width: 24px;
+  border-image: url("image/lolborder.png") 24 24 24 24 repeat;
+  color: Black; }
+
+/* settings panel */
+#settingspanel, #searchpanel {
+  background-image: url("image/lolbackbg.png");
+  border-width: 24px;
+  border-image: url("image/lolback.png") 24 24 24 24 repeat;
+  color: #bcd9e2; }
+  #settingspanel h1, #searchpanel h1 {
+    -webkit-text-shadow: 0 0 2px #bcd9e2; }
+  #settingspanel li p, #searchpanel li p {
+    color: #8ca9b2; }
+  #settingspanel a, #settingspanel a:visited, #searchpanel a, #searchpanel a:visited {
+    color: #bcd9e2; }
+    #settingspanel a:hover, #settingspanel a:visited:hover, #searchpanel a:hover, #searchpanel a:visited:hover {
+      -webkit-text-shadow: 0 0 2px #bcd9e2; }
+    #settingspanel a:active, #settingspanel a:visited:active, #searchpanel a:active, #searchpanel a:visited:active {
+      -webkit-text-shadow: 0 0 1px #bcd9e2; }
+  #settingspanel button.checkbox, #searchpanel button.checkbox {
+    background-image: url("image/checkbox_lol.png"); }
+
+/* favorite button */
+div.favheart {
+  background-image: url("image/favorite_lol.png"); }
+
+/* table */
+#streamscontainer div.row, #notification div.row {
+  border-color: #dcb947; }
+
+#searchresults div.row {
+  border-color: #484461; }
+
+/* links */
+a, a:visited {
+  color: Black; }
+  a:hover, a:visited:hover {
+    color: #0058c6; }
+  a:active, a:visited:active {
+    color: #0078d6; }
+
+/* Context menu */
+#contextmenu {
+  background-color: #131720;
+  border: 1px solid #a5c0ca;
+  color: #fff; }
+  #contextmenu li:hover {
+    background-color: #548ea8;
+    color: #fff; }
+
+/* Settings Button */
+button {
+  /* Stream buttons */ }
+  button.settings {
+    background-image: url("image/settings_lol.png"); }
+  button.search {
+    background-image: url("image/search_lol.png"); }
+  button.close {
+    background-image: url("image/close_lol.png"); }
+  button.favstream:hover, button.favstream.custom {
+    -webkit-box-shadow: 0 0 3px 2px #9dca0a; }
+  button.stream:hover {
+    -webkit-box-shadow: 0 0 3px 2px #1583d8; }
+
+button.stream_lol {
+  background-image: url("image/stream_lol.png"); }
+
+/* Featured streams */
+.riotfeatured, .riottournament {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-right: 4px;
+  /*position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-8px;
+	margin-left:-8px;*/ }
+

@@ -1,0 +1,34 @@
+[
+  {
+    "outputFile": "games/csgo/csgo.css",
+    "inputFile": "games/csgo/csgo.scss"
+  },
+  {
+    "outputFile": "games/dota2/dota2.css",
+    "inputFile": "games/dota2/dota2.scss"
+  },
+  {
+    "outputFile": "games/hs/hs.css",
+    "inputFile": "games/hs/hs.scss"
+  },
+  {
+    "outputFile": "games/lol/lol.css",
+    "inputFile": "games/lol/lol.scss"
+  },
+  {
+    "outputFile": "games/overwatch/overwatch.css",
+    "inputFile": "games/overwatch/overwatch.scss"
+  },
+  {
+    "outputFile": "games/sc2/sc2.css",
+    "inputFile": "games/sc2/sc2.scss"
+  },
+  {
+    "outputFile": "games/wow/wow.css",
+    "inputFile": "games/wow/wow.scss"
+  },
+  {
+    "outputFile": "style/streambrowser.css",
+    "inputFile": "style/streambrowser.scss"
+  }
+]

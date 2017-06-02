@@ -1,0 +1,248 @@
+﻿/*
+ * Live Stream Browser is Copyright (C) 2011-2016 Kyle Schouviller <Kyle0654@hotmail.com>
+ * 
+ * You are hereby granted a licence to use the software as-is, and view the source code for educational purposes.
+ * You may not create derivative versions of the software without written permission of the author.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+/* body style */
+body {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  border-style: solid; }
+
+body.popup {
+  min-height: 700px; }
+
+/* text */
+h1 {
+  font-size: medium;
+  font-weight: bold; }
+
+/* general panel styles */
+#mainpanel {
+  position: relative;
+  min-height: 700px; }
+
+/* settings */
+#settingspanel, #searchpanel {
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -24px;
+  padding: 0;
+  font-size: 10px;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  line-height: 15px; }
+  #settingspanel ul, #settingspanel li, #searchpanel ul, #searchpanel li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  #settingspanel li, #searchpanel li {
+    margin: 0.25em 0; }
+    #settingspanel li p, #searchpanel li p {
+      margin: 0 12px 0 12px;
+      padding-left: 0.5em; }
+  #settingspanel button.checkbox, #searchpanel button.checkbox {
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: left 0px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 0.25em; }
+    #settingspanel button.checkbox:active, #searchpanel button.checkbox:active {
+      background-position: left -24px; }
+    #settingspanel button.checkbox.checked, #searchpanel button.checkbox.checked {
+      background-position: left -36px; }
+      #settingspanel button.checkbox.checked:active, #searchpanel button.checkbox.checked:active {
+        background-position: left -12px; }
+  #settingspanel .img_button, #searchpanel .img_button {
+    cursor: pointer; }
+
+/* search input */
+#searchpanel input {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  height: 16px;
+  width: 200px; }
+
+/* status header */
+div.statusheader, div.statusheader * {
+  text-align: right; }
+
+div.statusheader > * {
+  margin-left: 4px; }
+
+/* favorite icon */
+div.favheart {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: auto; }
+
+/* table styling */
+#streamscontainer div.row, #searchresults div.row, #notification div.row {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 2px 0px; }
+  #streamscontainer div.row > div.cell_fav, #searchresults div.row > div.cell_fav, #notification div.row > div.cell_fav {
+    -webkit-flex: none;
+    width: 20px;
+    text-align: center; }
+  #streamscontainer div.row > div.cell_service, #searchresults div.row > div.cell_service, #notification div.row > div.cell_service {
+    -webkit-flex: none;
+    width: 20px; }
+    #streamscontainer div.row > div.cell_service > img, #searchresults div.row > div.cell_service > img, #notification div.row > div.cell_service > img {
+      margin: 0 3px; }
+  #streamscontainer div.row > div.cell_viewers, #searchresults div.row > div.cell_viewers, #notification div.row > div.cell_viewers {
+    -webkit-flex: none;
+    width: 40px;
+    text-align: right; }
+  #streamscontainer div.row > div.cell_name, #searchresults div.row > div.cell_name, #notification div.row > div.cell_name {
+    -webkit-flex: 1;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: pre;
+    /* CSS 2.0 */
+    white-space: pre-wrap;
+    /* CSS 2.1 */
+    white-space: pre-line;
+    /* CSS 3.0 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla */
+    white-space: -hp-pre-wrap;
+    /* HP Printers */
+    word-wrap: break-word;
+    /* IE 5+ */
+    padding-left: 6px; }
+    #streamscontainer div.row > div.cell_name *, #searchresults div.row > div.cell_name *, #notification div.row > div.cell_name * {
+      vertical-align: middle; }
+    #streamscontainer div.row > div.cell_name span, #searchresults div.row > div.cell_name span, #notification div.row > div.cell_name span {
+      /*width:$wname - 4px;*/
+      width: calc(100% - 8px);
+      display: block; }
+
+#streamscontainer div.row:last-child, #searchresults div.row:last-child, #notification div.row:last-child {
+  border-bottom: none; }
+
+/* links */
+a, a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-in-out; }
+
+/* settings/search Button */
+button.settings, button.search, button.close {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: left 0px;
+  cursor: pointer;
+  background-color: transparent;
+  float: right; }
+  button.settings:hover, button.search:hover, button.close:hover {
+    background-position: left -32px; }
+  button.settings:active, button.search:active, button.close:active {
+    background-position: left -16px; }
+
+button.settingsbright {
+  background-position: left -16px; }
+
+button.searchbright {
+  background-position: left -16px;
+  margin-right: 16px; }
+
+/* stream buttons */
+button.favbutton, div.favbutton {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: left 0px;
+  cursor: pointer;
+  background-color: transparent; }
+
+button.stream, button.favstream:active, div.stream, div.favstream:active {
+  background-position: left 0px; }
+
+button.stream:active:not(.custom), button.favstream:not(.custom), div.stream:active:not(.custom), div.favstream:not(.custom) {
+  background-position: left -16px; }
+
+button:focus {
+  outline: 0; }
+
+div.favbutton {
+  display: inline-block;
+  cursor: default; }
+
+/* Context menu */
+#contextmenu {
+  display: none;
+  position: absolute;
+  padding: 0;
+  background-color: #aaf;
+  border: 1px solid #F00;
+  -webkit-box-shadow: 0 0 3px 2px #333; }
+  #contextmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  #contextmenu li {
+    margin: 0;
+    padding: 2px 10px;
+    cursor: pointer; }
+    #contextmenu li:hover {
+      background-color: #f00; }
+
+/* notifications */
+#notification {
+  cursor: pointer; }
+
+img.noticon {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  vertical-align: middle; }
+
+a.streamer {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  font-family: Arial, Sans-Serif;
+  font-weight: bold;
+  cursor: pointer; }
+
+/* Search */
+/* General */
+.offline {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
